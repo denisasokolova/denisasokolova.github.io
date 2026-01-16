@@ -1,0 +1,84 @@
+body {
+    /* Ponechte původní barvy a písmo, jen přidáme obrázek */
+    color: #c9d1d9; 
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
+    
+    /* --- ZDE JE MAGIE PRO POZADÍ --- */
+    background-image: url('cela.jpg'); 
+    background-color: #252a32; /* Tmavá barva jako základ */
+    background-blend-mode: multiply; /* Smíchá barvu a obrázek pro ztmavení */
+    
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    
+    /* Přidáme plynulý přechod */
+    transition: background-image 1s ease-in-out; 
+}
+
+/* Zbytek vašeho CSS kódu je v pořádku a zůstává beze změny! */
+.game-container {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#story-text {
+    margin: 20px 0;
+    min-height: 80px;
+}
+
+.choice-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    background: #21262d;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.choice-button:hover {
+    background: #30363d;
+    color: #ffffff;
+}
+
+/* Styl pro tlačítko restart (základ) */
+#restart-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+}
+
+/* Zelená pro VÍTĚZSTVÍ */
+#restart-button.win-button {
+    background: #28a745; 
+}
+#restart-button.win-button:hover {
+    background: #1e7e34;
+}
+
+/* Červená pro PROHRU/SMRT */
+#restart-button.lose-button {
+    background: #dc3545; 
+}
+#restart-button.lose-button:hover {
+    background: #c82333;
+}
