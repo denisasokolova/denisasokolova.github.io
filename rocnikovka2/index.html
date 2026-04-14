@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtSpace</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+  <header class="hlavicka">
+    <div class="obal hlavicka_radek">
+      <div class="logo">ArtSpace</div>
+      <nav class="menu">
+        <a href="#expozice">Expozice</a>
+        <a href="#premium">Top výstavy</a>
+        <a href="#recenze">Recenze</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rezervace">Rezervace</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="uvod">
+      <div class="obal uvod_mrizka">
+        <div class="uvod_text">
+          <h1>Moderní umění bez nudy</h1>
+          <p>
+            Fiktivní muzeum ArtSpace zaměřené na současné, digitální
+            a vizuální umění.
+          </p>
+          <a href="#rezervace" class="tlacitko">Rezervovat vstupenku</a>
+        </div>
+
+        <div class="uvod_obrazek">
+          <span>Hlavní obrázek / banner</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce">
+      <div class="obal">
+        <h2>Countdown do nové výstavy</h2>
+        <div class="odpocet">
+          <div class="odpocet_box">
+            <strong>12</strong>
+            <span>dní</span>
+          </div>
+          <div class="odpocet_box">
+            <strong>08</strong>
+            <span>hodin</span>
+          </div>
+          <div class="odpocet_box">
+            <strong>30</strong>
+            <span>minut</span>
+          </div>
+          <div class="odpocet_box">
+            <strong>10</strong>
+            <span>sekund</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="expozice">
+      <div class="obal">
+        <h2>Expozice</h2>
+        <div class="mrizka_tri">
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>AI Art</h3>
+            <p>Digitální obrazy a experimenty s umělou inteligencí.</p>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>Street Vision</h3>
+            <p>Městské umění, graffiti a vizuální kultura ulice.</p>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>Sochy a prostor</h3>
+            <p>Objekty, instalace a práce s prostorem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="premium">
+      <div class="obal">
+        <h2>Prémiové výstavy</h2>
+        <div class="mrizka_tri">
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>Neon Future</h3>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>Minimal Lines</h3>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek</div>
+            <h3>Digital Pulse</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="recenze">
+      <div class="obal">
+        <h2>Recenze návštěvníků</h2>
+        <div class="mrizka_dve">
+          <div class="karta">
+            <p>„Přehledné, moderní a vizuálně zajímavé muzeum.“</p>
+            <strong>– návštěvník</strong>
+          </div>
+
+          <div class="karta">
+            <p>„Rezervace byla jednoduchá a výstava digitálního umění skvělá.“</p>
+            <strong>– návštěvník</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="faq">
+      <div class="obal">
+        <h2>FAQ</h2>
+
+        <div class="faq_polozka">
+          <h3>Kolik stojí vstupenka?</h3>
+          <p>Základní vstupné 180 Kč, student 120 Kč.</p>
+        </div>
+
+        <div class="faq_polozka">
+          <h3>Je potřeba rezervace předem?</h3>
+          <p>Není nutná, ale doporučuje se.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="rezervace">
+      <div class="obal">
+        <h2>Rezervace vstupenek</h2>
+
+        <form class="formular">
+          <input type="date">
+          <input type="time">
+          <input type="number" placeholder="Počet osob">
+          <select>
+            <option>Typ vstupenky</option>
+            <option>Dospělý</option>
+            <option>Student</option>
+            <option>Rodinná</option>
+          </select>
+          <input type="email" placeholder="E-mail">
+          <button type="submit" class="tlacitko">Odeslat rezervaci</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="sekce" id="kontakt">
+      <div class="obal kontakt_mrizka">
+        <div class="karta kontakt_box">
+          <h2>Kontakt</h2>
+          <p>ArtSpace Museum</p>
+          <p>Galerijní 12, Praha</p>
+          <p>info@artspace.cz</p>
+          <p>+420 123 456 789</p>
+        </div>
+
+        <div class="mapa">
+          <span>Mapa muzea</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="paticka">
+    <div class="obal">
+      <p>© 2026 ArtSpace Museum</p>
+    </div>
+  </footer>
+
+</body>
+</html>
