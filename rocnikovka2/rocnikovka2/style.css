@@ -1,0 +1,552 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #262421;
+  background-color: #f4efe8;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.obal {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.hlavicka {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(251, 248, 243, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #d8cfc4;
+}
+
+.hlavicka_radek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #262421;
+  font-size: 15px;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+.menu_tlacitko {
+  display: none;
+  background: none;
+  border: 1px solid #d8cfc4;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #262421;
+  background-color: #fbf8f3;
+}
+
+.uvod {
+  padding: 88px 0 72px;
+}
+
+.uvod_mrizka {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.podnadpis {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #6f6a63;
+  margin: 0 0 14px;
+}
+
+.uvod_text h1 {
+  margin: 0 0 22px;
+  font-size: 58px;
+  line-height: 1.04;
+  max-width: 680px;
+  font-weight: 700;
+}
+
+.uvod_text p {
+  max-width: 540px;
+  margin: 0 0 30px;
+  font-size: 18px;
+  color: #5f5a54;
+}
+
+.drobny_text {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #6b655f;
+}
+
+.tlacitko {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  background-color: #262421;
+  color: #fbf8f3;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tlacitko:hover {
+  background-color: #3a3733;
+  transform: translateY(-1px);
+}
+
+.uvod_obrazek {
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
+  background-color: #ddd2c4;
+  border-radius: 28px 8px 28px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f5a54;
+  padding: 24px;
+}
+
+.uvod_obrazek::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(174, 189, 202, 0.35);
+  border-radius: 50%;
+  top: 24px;
+  right: 24px;
+}
+
+.uvod_obrazek span {
+  position: relative;
+  z-index: 2;
+}
+
+.sekce {
+  padding: 72px 0;
+}
+
+.sekce h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.sekce_nadpis {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.sekce_nadpis p:last-child {
+  margin: 8px 0 0;
+  color: #5f5a54;
+}
+
+#odpocet {
+  border-top: 1px solid #d8cfc4;
+  border-bottom: 1px solid #d8cfc4;
+}
+
+.odpocet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.odpocet_box {
+  padding: 24px 18px;
+  text-align: center;
+  border-top: 2px solid #aebdca;
+  border-bottom: 1px solid #d8cfc4;
+}
+
+.odpocet_box strong {
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.odpocet_box span {
+  color: #6b655f;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.mrizka_tri {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.mrizka_dve {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.karta {
+  background-color: #fbf8f3;
+  border: 1px solid #e2d9cf;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.karta h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.karta p {
+  margin: 0;
+  color: #5f5a54;
+}
+
+.nahled_obrazku {
+  height: 220px;
+  background-color: #ddd2c4;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f5a54;
+  font-size: 15px;
+}
+
+#recenze {
+  background-color: #fbf8f3;
+}
+
+.recenzni_karta {
+  padding: 6px 0 6px 18px;
+  border-left: 3px solid #aebdca;
+}
+
+.recenzni_karta::before {
+  content: "“";
+  display: block;
+  font-size: 54px;
+  line-height: 1;
+  color: #aebdca;
+  margin-bottom: 6px;
+}
+
+.recenzni_karta p {
+  margin: 0 0 14px;
+  font-size: 18px;
+  color: #3d3935;
+}
+
+.faq_seznam {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq_polozka {
+  border-bottom: 1px solid #d8cfc4;
+  padding: 0 0 14px;
+}
+
+.faq_polozka summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-size: 19px;
+  color: #262421;
+}
+
+.faq_polozka summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq_polozka p {
+  margin: 12px 0 0;
+  color: #5f5a54;
+}
+
+.formular_box {
+  background-color: #fbf8f3;
+  border: 1px solid #e2d9cf;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.formular_box::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #aebdca;
+  margin-bottom: 22px;
+}
+
+.formular {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formular input,
+.formular select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d6ccc1;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fffdf9;
+  color: #262421;
+}
+
+.formular input:focus,
+.formular select:focus {
+  outline: none;
+  border-color: #aebdca;
+}
+
+.formular .cela_sirka {
+  grid-column: 1 / -1;
+}
+
+.kontakt_mrizka {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.kontakt_text {
+  border-top: 2px solid #aebdca;
+  padding-top: 18px;
+}
+
+.kontakt_text p {
+  margin: 0 0 10px;
+  color: #5f5a54;
+}
+
+.mapa {
+  min-height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ddd2c4;
+  background-color: #ddd2c4;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%) contrast(0.95);
+}
+
+.paticka {
+  margin-top: 54px;
+  padding: 28px 0;
+  text-align: center;
+  border-top: 1px solid #d8cfc4;
+  background-color: #fbf8f3;
+  color: #5f5a54;
+}
+
+/* Carousel */
+.carousel_box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.carousel_tlacitko {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d8cfc4;
+  border-radius: 50%;
+  background-color: #fbf8f3;
+  color: #262421;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.carousel_tlacitko:hover {
+  background-color: #ece5dc;
+}
+
+.carousel_tlacitko:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.carousel_okno {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel_stopa {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+.carousel_karta {
+  min-width: calc(33.333% - 16px);
+  background-color: #fbf8f3;
+  border: 1px solid #e2d9cf;
+  border-radius: 18px;
+  padding: 22px;
+  flex-shrink: 0;
+}
+
+.carousel_karta h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.carousel_karta p {
+  margin: 0;
+  color: #5f5a54;
+}
+
+.cislo_karty {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7b746d;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 980px) {
+  .uvod_text h1 {
+    font-size: 46px;
+  }
+
+  .mrizka_tri {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .odpocet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel_karta {
+    min-width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hlavicka_radek {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .menu_tlacitko {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .menu.otevrene {
+    display: flex;
+  }
+
+  .uvod {
+    padding: 56px 0 42px;
+  }
+
+  .uvod_mrizka,
+  .mrizka_tri,
+  .mrizka_dve,
+  .kontakt_mrizka,
+  .formular,
+  .odpocet {
+    grid-template-columns: 1fr;
+  }
+
+  .uvod_text h1 {
+    font-size: 36px;
+  }
+
+  .uvod_text p {
+    font-size: 16px;
+  }
+
+  .uvod_obrazek {
+    min-height: 280px;
+  }
+
+  .sekce {
+    padding: 48px 0;
+  }
+
+  .sekce h2 {
+    font-size: 28px;
+  }
+
+  .carousel_box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .carousel_tlacitko {
+    width: 100%;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .carousel_karta {
+    min-width: 100%;
+  }
+}
