@@ -1,0 +1,269 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtSpace</title>
+  <meta name="description" content="ArtSpace je fiktivní muzeum moderního umění se zaměřením na současné, digitální a vizuální expozice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hlavicka">
+    <div class="obal hlavicka_radek">
+      <div class="logo">ArtSpace</div>
+
+      <button class="menu_tlacitko" id="menuTlacitko" aria-label="Otevřít menu">
+        ☰
+      </button>
+
+      <nav class="menu" id="hlavniMenu">
+        <a href="#expozice">Expozice</a>
+        <a href="#premium">Top výstavy</a>
+        <a href="#recenze">Recenze</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rezervace">Rezervace</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="uvod">
+      <div class="obal uvod_mrizka">
+        <div class="uvod_text">
+          <p class="podnadpis">Kurátorovaný prostor současného umění</p>
+          <h1>Současné umění, digitální instalace a vizuální zážitky.</h1>
+          <p>
+            ArtSpace je fiktivní muzeum moderního umění, které propojuje galerijní prostor,
+            interaktivní výstavy a digitální kulturu v jemně kurátorovaném prostředí.
+          </p>
+          <a href="#rezervace" class="tlacitko">Rezervovat vstupenku</a>
+          <p class="drobny_text">Nová výstava od 15. května 2026 • Praha</p>
+        </div>
+
+        <div class="uvod_obrazek">
+          <span>Hlavní vizuál výstavy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="odpocet">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Nová výstava</p>
+          <h2>Countdown do zahájení</h2>
+          <p>Odpočet do otevření připravované výstavy zaměřené na současné digitální umění.</p>
+        </div>
+
+        <div class="odpocet">
+          <div class="odpocet_box">
+            <strong id="dny">00</strong>
+            <span>dní</span>
+          </div>
+
+          <div class="odpocet_box">
+            <strong id="hodiny">00</strong>
+            <span>hodin</span>
+          </div>
+
+          <div class="odpocet_box">
+            <strong id="minuty">00</strong>
+            <span>minut</span>
+          </div>
+
+          <div class="odpocet_box">
+            <strong id="sekundy">00</strong>
+            <span>sekund</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="expozice">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Aktuálně v galerii</p>
+          <h2>Expozice</h2>
+          <p>Výběr výstav zaměřených na současné vizuální umění, digitální tvorbu a prostorové instalace.</p>
+        </div>
+
+        <div class="mrizka_tri">
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek expozice</div>
+            <h3>AI Art</h3>
+            <p>Digitální obrazy, generativní tvorba a experimenty s umělou inteligencí v současném umění.</p>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek expozice</div>
+            <h3>Město v pohybu</h3>
+            <p>Street art, městská vizualita a proměny veřejného prostoru v moderní kultuře.</p>
+          </article>
+
+          <article class="karta">
+            <div class="nahled_obrazku">Obrázek expozice</div>
+            <h3>Sochy a prostor</h3>
+            <p>Instalace, objekty a práce s pohybem návštěvníka v galerijním prostředí.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="premium">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Kurátorský výběr</p>
+          <h2>Prémiové výstavy</h2>
+          <p>Výběr nejvýraznějších výstav, které propojují obraz, prostor, zvuk a digitální kulturu.</p>
+        </div>
+
+        <div class="carousel_box">
+          <button class="carousel_tlacitko" id="predchoziBtn" aria-label="Předchozí výstava">←</button>
+
+          <div class="carousel_okno">
+            <div class="carousel_stopa" id="carouselStopa">
+              <article class="carousel_karta">
+                <div class="nahled_obrazku">Top výstava</div>
+                <div class="cislo_karty">01 / Top výstava</div>
+                <h3>Neon Future</h3>
+                <p>Audiovizuální instalace propojující světlo, zvuk a digitální obraz v imerzivním prostoru.</p>
+              </article>
+
+              <article class="carousel_karta">
+                <div class="nahled_obrazku">Top výstava</div>
+                <div class="cislo_karty">02 / Výběr</div>
+                <h3>Digitální identita</h3>
+                <p>Výstava o tom, jak technologie mění lidskou identitu a vnímání reality.</p>
+              </article>
+
+              <article class="carousel_karta">
+                <div class="nahled_obrazku">Top výstava</div>
+                <div class="cislo_karty">03 / Výběr</div>
+                <h3>Minimal Lines</h3>
+                <p>Minimalistická díla založená na čisté kompozici, rytmu prostoru a klidné vizualitě.</p>
+              </article>
+
+              <article class="carousel_karta">
+                <div class="nahled_obrazku">Top výstava</div>
+                <div class="cislo_karty">04 / Výběr</div>
+                <h3>Echo Forms</h3>
+                <p>Výstava pracující s opakováním tvarů, prostorem a světelnou kompozicí.</p>
+              </article>
+            </div>
+          </div>
+
+          <button class="carousel_tlacitko" id="dalsiBtn" aria-label="Další výstava">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="recenze">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Zkušenost návštěvníků</p>
+          <h2>Recenze návštěvníků</h2>
+          <p>Krátké reakce návštěvníků na výstavy, prostředí a celkový dojem z galerie.</p>
+        </div>
+
+        <div class="mrizka_dve">
+          <div class="recenzni_karta">
+            <p>„Moc příjemné prostředí, moderní vzhled a výstava digitálního umění byla nejlepší část celé návštěvy.“</p>
+            <strong>– návštěvník</strong>
+          </div>
+
+          <div class="recenzni_karta">
+            <p>„Web je přehledný, rezervace jednoduchá a samotná expozice působila současně a profesionálně.“</p>
+            <strong>– návštěvník</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="faq">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Návštěvnické informace</p>
+          <h2>FAQ</h2>
+          <p>Praktické odpovědi na nejčastější otázky o návštěvě muzea a rezervaci vstupenek.</p>
+        </div>
+
+        <div class="faq_seznam">
+          <details class="faq_polozka">
+            <summary>Kolik stojí vstupenka?</summary>
+            <p>Základní vstupné je 180 Kč, studentské 120 Kč a rodinné 420 Kč.</p>
+          </details>
+
+          <details class="faq_polozka">
+            <summary>Je potřeba rezervace předem?</summary>
+            <p>Rezervace není povinná, ale doporučujeme ji hlavně o víkendech a při speciálních výstavách.</p>
+          </details>
+
+          <details class="faq_polozka">
+            <summary>Jaká je otevírací doba?</summary>
+            <p>Muzeum je otevřeno od úterý do neděle, vždy od 10:00 do 18:00.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="rezervace">
+      <div class="obal">
+        <div class="sekce_nadpis">
+          <p class="podnadpis">Rezervace návštěvy</p>
+          <h2>Rezervace vstupenek</h2>
+          <p>Vyberte datum, čas, počet osob a typ vstupenky pro plánovanou návštěvu galerie.</p>
+        </div>
+
+        <div class="formular_box">
+          <form class="formular">
+            <input type="date" aria-label="Datum návštěvy">
+            <input type="time" aria-label="Čas návštěvy">
+            <input type="number" placeholder="Počet osob" aria-label="Počet osob">
+            <select aria-label="Typ vstupenky">
+              <option>Typ vstupenky</option>
+              <option>Dospělý</option>
+              <option>Student</option>
+              <option>Rodinná</option>
+            </select>
+            <input class="cela_sirka" type="email" placeholder="E-mail" aria-label="E-mail">
+            <button type="submit" class="tlacitko cela_sirka">Odeslat rezervaci</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce" id="kontakt">
+      <div class="obal kontakt_mrizka">
+        <div class="kontakt_text">
+          <p class="podnadpis">Navštivte nás</p>
+          <h2>Kontakt</h2>
+          <p><strong>ArtSpace Museum</strong></p>
+          <p>Galerijní 12, 110 00 Praha</p>
+          <p>info@artspace.cz</p>
+          <p>+420 123 456 789</p>
+          <p>Út–Ne: 10:00–18:00</p>
+        </div>
+
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps?q=Praha&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa muzea">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="paticka">
+    <div class="obal">
+      <p>© 2026 ArtSpace Muzeum.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
