@@ -55,76 +55,68 @@ function zjistitPocetViditelnychKaret() {
   }
 }
 
-// posouva carousel doleva nebo doprava
+// posouva carousel
 function posunoutCarousel() {
   if (!carouselStopa || carouselKarty.length === 0) {
     return;
   }
 
-  const viditelneKarty = zjistitPocetViditelnychKaret();
   const karta = carouselKarty[0];
   const gap = 24;
   const sirkaKarty = karta.offsetWidth + gap;
 
-  // samotne posunuti carouselu
   carouselStopa.style.transform = `translateX(-${aktualniIndex * sirkaKarty}px)`;
-
-  const maxIndex = Math.max(0, carouselKarty.length - viditelneKarty);
-
-  // vypnuti leveho tlacitka na zacatku
-  if (predchoziBtn) {
-    predchoziBtn.disabled = aktualniIndex === 0;
-  }
-
-  // vypnuti praveho tlacitka na konci
-  if (dalsiBtn) {
-    dalsiBtn.disabled = aktualniIndex >= maxIndex;
-  }
 }
 
-// kliknuti na dalsi kartu
+// klik na dalsi sipku - kdyz je konec, vrati se na zacatek
 if (dalsiBtn) {
   dalsiBtn.addEventListener("click", function () {
     const viditelneKarty = zjistitPocetViditelnychKaret();
     const maxIndex = Math.max(0, carouselKarty.length - viditelneKarty);
 
-    if (aktualniIndex < maxIndex) {
+    if (aktualniIndex >= maxIndex) {
+      aktualniIndex = 0;
+    } else {
       aktualniIndex++;
-      posunoutCarousel();
     }
+
+    posunoutCarousel();
   });
 }
 
-// kliknuti na predchozi kartu
+// klik na predchozi sipku - kdyz je zacatek, skoci na konec
 if (predchoziBtn) {
   predchoziBtn.addEventListener("click", function () {
-    if (aktualniIndex > 0) {
+    const viditelneKarty = zjistitPocetViditelnychKaret();
+    const maxIndex = Math.max(0, carouselKarty.length - viditelneKarty);
+
+    if (aktualniIndex <= 0) {
+      aktualniIndex = maxIndex;
+    } else {
       aktualniIndex--;
-      posunoutCarousel();
     }
+
+    posunoutCarousel();
   });
 }
 
-// prepocitani carouselu pri zmene velikosti okna
+// pri zmene sirky obrazovky se carousel prepocita
 window.addEventListener("resize", function () {
   const viditelneKarty = zjistitPocetViditelnychKaret();
   const maxIndex = Math.max(0, carouselKarty.length - viditelneKarty);
 
   if (aktualniIndex > maxIndex) {
-    aktualniIndex = maxIndex;
+    aktualniIndex = 0;
   }
 
   posunoutCarousel();
 
-  // kdyz se obrazovka zvetsi na desktop, zavre se mobilni menu
   if (window.innerWidth > 768 && hlavniMenu) {
     hlavniMenu.classList.remove("otevrene");
   }
 });
 
-// spusteni carouselu po nacteni stranky
 window.addEventListener("load", posunoutCarousel);
-
 
 // mobilni menu
 const menuTlacitko = document.getElementById("menuTlacitko");

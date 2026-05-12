@@ -642,18 +642,39 @@ body {
     font-size: 36px;
   }
 
-  .carousel_box {
-    flex-direction: column;
-    align-items: stretch;
-  }
+ .carousel_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
 
-  .carousel_tlacitko {
-    width: 100%;
-    height: 48px;
-    border-radius: 14px;
-  }
+.carousel_okno {
+  grid-column: 1 / -1;
+  order: 1;
+}
 
-  .carousel_karta {
-    min-width: 100%;
-  }
+.carousel_tlacitko {
+  width: 100%;
+  height: 46px;
+  border-radius: 999px;
+  order: 2;
+}
+
+.carousel_karta {
+  min-width: 100%;
+  padding: 18px;
+}
+
+.carousel_karta h3 {
+  font-size: 24px;
+}
+
+.carousel_karta p {
+  font-size: 15px;
+}
+
+.carousel_karta .obrazek_karty {
+  height: 190px;
+}
 }
