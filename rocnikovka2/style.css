@@ -1,11 +1,14 @@
+/* nastavi aby se padding a border pocital do sirky prvku */
 * {
   box-sizing: border-box;
 }
 
+/* plynule scrollovani po kliknuti na menu */
 html {
   scroll-behavior: smooth;
 }
 
+/* zakladni vzhled cele stranky */
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -14,17 +17,32 @@ body {
   line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+/* hlavni obrazek v uvodu */
+.uvod_obrazek img {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  object-fit: cover;
+  border-radius: 28px 8px 28px 8px;
 }
 
+/* obrazky v kartach */
+.obrazek_karty {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+/* hlavni obal aby obsah nebyl az ke krajum */
 .obal {
   width: 90%;
   max-width: 1180px;
   margin: 0 auto;
 }
 
+/* hlavicka zustava nahore pri scrollovani */
 .hlavicka {
   position: sticky;
   top: 0;
@@ -34,6 +52,7 @@ img {
   border-bottom: 1px solid #d8cfc4;
 }
 
+/* radek v hlavicce */
 .hlavicka_radek {
   display: flex;
   justify-content: space-between;
@@ -42,6 +61,7 @@ img {
   padding: 18px 0;
 }
 
+/* logo */
 .logo {
   font-family: "Playfair Display", serif;
   font-size: 34px;
@@ -50,6 +70,7 @@ img {
   flex-shrink: 0;
 }
 
+/* menu na desktopu */
 .menu {
   display: flex;
   gap: 22px;
@@ -57,6 +78,7 @@ img {
   margin-left: auto;
 }
 
+/* odkazy v menu */
 .menu a {
   text-decoration: none;
   color: #262421;
@@ -64,10 +86,12 @@ img {
   transition: opacity 0.2s ease;
 }
 
+/* efekt pri najeti na odkaz */
 .menu a:hover {
   opacity: 0.6;
 }
 
+/* tlacitko menu na mobilu je na desktopu schovane */
 .menu_tlacitko {
   display: none;
   background: none;
@@ -81,10 +105,12 @@ img {
   margin-left: auto;
 }
 
+/* uvodni sekce */
 .uvod {
   padding: 88px 0 72px;
 }
 
+/* rozlozeni uvodu na text a obrazek */
 .uvod_mrizka {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -92,6 +118,7 @@ img {
   align-items: center;
 }
 
+/* maly text nad nadpisem */
 .podnadpis {
   font-size: 12px;
   text-transform: uppercase;
@@ -101,10 +128,12 @@ img {
   text-align: center;
 }
 
+/* zarovnani textu v uvodu */
 .uvod_text {
   text-align: center;
 }
 
+/* hlavni nadpis */
 .uvod_text h1 {
   font-family: "Playfair Display", serif;
   margin: 0 auto 22px;
@@ -114,6 +143,7 @@ img {
   font-weight: 700;
 }
 
+/* odstavec v uvodu */
 .uvod_text p {
   max-width: 620px;
   margin: 0 auto 30px;
@@ -121,12 +151,14 @@ img {
   color: #5f5a54;
 }
 
+/* mensi doplnkovy text */
 .drobny_text {
   margin-top: 14px;
   font-size: 14px;
   color: #6b655f;
 }
 
+/* hlavni tlacitko */
 .tlacitko {
   display: inline-block;
   padding: 14px 24px;
@@ -140,11 +172,13 @@ img {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* efekt tlacitka */
 .tlacitko:hover {
   background-color: #3a3733;
   transform: translateY(-1px);
 }
 
+/* box pro uvodni obrazek */
 .uvod_obrazek {
   position: relative;
   overflow: hidden;
@@ -158,6 +192,7 @@ img {
   padding: 24px;
 }
 
+/* dekorativni kruh v uvodnim obrazku */
 .uvod_obrazek::before {
   content: "";
   position: absolute;
@@ -169,6 +204,7 @@ img {
   right: 24px;
 }
 
+/* text v uvodnim obrazku pokud by tam nebyl obrazek */
 .uvod_obrazek span {
   position: relative;
   z-index: 2;
@@ -176,11 +212,13 @@ img {
   font-size: 26px;
 }
 
+/* obecne nastaveni sekci */
 .sekce {
   padding: 72px 0;
   scroll-margin-top: 110px;
 }
 
+/* nadpisy sekci */
 .sekce h2 {
   font-family: "Playfair Display", serif;
   margin: 0 0 10px;
@@ -190,28 +228,33 @@ img {
   font-weight: 700;
 }
 
+/* obal nadpisu sekce */
 .sekce_nadpis {
   max-width: 760px;
   margin: 0 auto 30px;
   text-align: center;
 }
 
+/* popis pod nadpisem */
 .sekce_nadpis p:last-child {
   margin: 8px 0 0;
   color: #5f5a54;
 }
 
+/* oddeleni sekce countdownu */
 #odpocet {
   border-top: 1px solid #d8cfc4;
   border-bottom: 1px solid #d8cfc4;
 }
 
+/* rozlozeni countdownu */
 .odpocet {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
+/* jeden box countdownu */
 .odpocet_box {
   padding: 24px 18px;
   text-align: center;
@@ -219,6 +262,7 @@ img {
   border-bottom: 1px solid #d8cfc4;
 }
 
+/* cislo v countdownu */
 .odpocet_box strong {
   display: block;
   font-family: "Playfair Display", serif;
@@ -228,6 +272,7 @@ img {
   font-weight: 700;
 }
 
+/* text pod cislem v countdownu */
 .odpocet_box span {
   color: #6b655f;
   text-transform: uppercase;
@@ -235,18 +280,21 @@ img {
   font-size: 12px;
 }
 
+/* grid se tremi sloupci */
 .mrizka_tri {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
+/* grid se dvema sloupci */
 .mrizka_dve {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
+/* karta expozice */
 .karta {
   background-color: #fbf8f3;
   border: 1px solid #e2d9cf;
@@ -254,6 +302,7 @@ img {
   padding: 22px;
 }
 
+/* nadpis v karte */
 .karta h3 {
   font-family: "Playfair Display", serif;
   margin: 0 0 10px;
@@ -261,11 +310,13 @@ img {
   line-height: 1.15;
 }
 
+/* text v karte */
 .karta p {
   margin: 0;
   color: #5f5a54;
 }
 
+/* stary placeholder pro obrazky */
 .nahled_obrazku {
   height: 220px;
   background-color: #ddd2c4;
@@ -278,15 +329,18 @@ img {
   font-size: 15px;
 }
 
+/* pozadi sekce recenzi */
 #recenze {
   background-color: #fbf8f3;
 }
 
+/* karta recenze */
 .recenzni_karta {
   padding: 6px 0 6px 18px;
   border-left: 3px solid #aebdca;
 }
 
+/* velka uvozovka pred recenzi */
 .recenzni_karta::before {
   content: "“";
   display: block;
@@ -297,23 +351,27 @@ img {
   margin-bottom: 6px;
 }
 
+/* text recenze */
 .recenzni_karta p {
   margin: 0 0 14px;
   font-size: 18px;
   color: #3d3935;
 }
 
+/* seznam faq */
 .faq_seznam {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
+/* jedna faq polozka */
 .faq_polozka {
   border-bottom: 1px solid #d8cfc4;
   padding: 0 0 14px;
 }
 
+/* otazka ve faq */
 .faq_polozka summary {
   cursor: pointer;
   list-style: none;
@@ -322,15 +380,18 @@ img {
   color: #262421;
 }
 
+/* schovani defaultni sipky ve faq */
 .faq_polozka summary::-webkit-details-marker {
   display: none;
 }
 
+/* odpoved ve faq */
 .faq_polozka p {
   margin: 12px 0 0;
   color: #5f5a54;
 }
 
+/* box formulare */
 .formular_box {
   background-color: #fbf8f3;
   border: 1px solid #e2d9cf;
@@ -338,6 +399,7 @@ img {
   padding: 28px;
 }
 
+/* dekorativni linka ve formulari */
 .formular_box::before {
   content: "";
   display: block;
@@ -347,12 +409,14 @@ img {
   margin: 0 auto 22px;
 }
 
+/* rozlozeni formulare */
 .formular {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
+/* inputy a select ve formulari */
 .formular input,
 .formular select {
   width: 100%;
@@ -365,16 +429,19 @@ img {
   font-family: "Inter", Arial, sans-serif;
 }
 
+/* aktivni pole formulare */
 .formular input:focus,
 .formular select:focus {
   outline: none;
   border-color: #aebdca;
 }
 
+/* prvek pres celou sirku formulare */
 .formular .cela_sirka {
   grid-column: 1 / -1;
 }
 
+/* rozlozeni kontaktu a mapy */
 .kontakt_mrizka {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -382,16 +449,19 @@ img {
   align-items: stretch;
 }
 
+/* kontaktni text */
 .kontakt_text {
   border-top: 2px solid #aebdca;
   padding-top: 18px;
 }
 
+/* odstavce v kontaktu */
 .kontakt_text p {
   margin: 0 0 10px;
   color: #5f5a54;
 }
 
+/* box mapy */
 .mapa {
   min-height: 340px;
   border-radius: 20px;
@@ -400,6 +470,7 @@ img {
   background-color: #ddd2c4;
 }
 
+/* google mapa */
 .mapa iframe {
   width: 100%;
   height: 100%;
@@ -407,6 +478,7 @@ img {
   filter: grayscale(100%) contrast(0.95);
 }
 
+/* paticka */
 .paticka {
   margin-top: 54px;
   padding: 28px 0;
@@ -416,12 +488,14 @@ img {
   color: #5f5a54;
 }
 
+/* cely carousel */
 .carousel_box {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
+/* tlacitka carouselu */
 .carousel_tlacitko {
   width: 52px;
   height: 52px;
@@ -434,26 +508,31 @@ img {
   flex-shrink: 0;
 }
 
+/* efekt tlacitka carouselu */
 .carousel_tlacitko:hover {
   background-color: #ece5dc;
 }
 
+/* vypnute tlacitko carouselu */
 .carousel_tlacitko:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
+/* okno carouselu schova pretekajici karty */
 .carousel_okno {
   overflow: hidden;
   width: 100%;
 }
 
+/* cast carouselu ktera se posouva */
 .carousel_stopa {
   display: flex;
   gap: 24px;
   transition: transform 0.4s ease;
 }
 
+/* jedna karta carouselu */
 .carousel_karta {
   min-width: calc(33.333% - 16px);
   background-color: #fbf8f3;
@@ -463,17 +542,20 @@ img {
   flex-shrink: 0;
 }
 
+/* nadpis v carouselu */
 .carousel_karta h3 {
   font-family: "Playfair Display", serif;
   margin: 0 0 10px;
   font-size: 28px;
 }
 
+/* text v carouselu */
 .carousel_karta p {
   margin: 0;
   color: #5f5a54;
 }
 
+/* male oznaceni karty */
 .cislo_karty {
   display: inline-block;
   font-size: 12px;
@@ -483,6 +565,7 @@ img {
   margin-bottom: 12px;
 }
 
+/* uprava pro tablet */
 @media (max-width: 980px) {
   .uvod_text h1 {
     font-size: 52px;
@@ -501,6 +584,7 @@ img {
   }
 }
 
+/* uprava pro mobil */
 @media (max-width: 768px) {
   .hlavicka_radek {
     flex-wrap: wrap;
