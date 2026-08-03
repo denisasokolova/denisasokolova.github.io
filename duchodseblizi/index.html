@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Old Man Bingo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ÚVODNÍ OBRAZOVKA -->
+    <main id="intro-screen" class="screen active">
+
+        <section class="intro-card">
+
+            <p class="small-title">
+                POZOR, DŮLEŽITÉ OZNÁMENÍ
+            </p>
+
+            <h1>
+                <span id="birthday-name">Mikey</span>
+                slaví
+                <span id="birthday-age">20</span>
+                let
+            </h1>
+
+            <div class="age-warning">
+                ⚠️ Oficiálně už není mladý ⚠️
+            </div>
+
+            <div class="meme-box">
+
+                <img
+                    id="intro-meme"
+                    src="meme-1.jpg"
+                    alt="Narozeninový meme"
+                >
+
+                <p id="meme-text">
+                    Když ti je 20 a už musíš při vstávání vydávat zvuky.
+                </p>
+
+            </div>
+
+            <button
+                id="next-meme-button"
+                class="secondary-button"
+            >
+                Další důkaz stáří
+            </button>
+
+            <button
+                id="start-game-button"
+                class="main-button"
+            >
+                Přijmout stáří a začít bingo
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- PRVNÍ ÚROVEŇ: MEME BINGO -->
+    <main id="game-screen" class="screen">
+
+        <section class="game-header">
+
+            <div>
+
+                <p class="small-title">
+                    PRVNÍ ÚROVEŇ
+                </p>
+
+                <h2>
+                    <span id="game-name">Mikey</span>'s Old Man Bingo
+                </h2>
+
+                <p>
+                    Klikni na políčko pokaždý, když se daná věc stala.
+                </p>
+
+            </div>
+
+            <button
+                id="restart-button"
+                class="secondary-button"
+            >
+                Nová karta
+            </button>
+
+        </section>
+
+        <section
+            id="bingo-board"
+            class="bingo-board"
+            aria-label="Meme bingo karta"
+        ></section>
+
+        <p id="game-status" class="game-status">
+            Zatím žádný bingo. Mikey se musí víc snažit.
+        </p>
+
+    </main>
+
+
+    <!-- VÝHERNÍ OKNO PRVNÍ ÚROVNĚ -->
+    <div id="win-modal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="winner-emoji">
+                👴🎉
+            </div>
+
+            <p class="small-title">
+                DŮCHOD POTVRZEN
+            </p>
+
+            <h2>BINGOOOOOOOOO!</h2>
+
+            <p>
+                Gratulujeme. Oficiálně jsi zestárl přímo před našima očima.
+            </p>
+
+            <button
+                id="continue-button"
+                class="main-button"
+            >
+                Pokračuj na pořádný bingo nebuď pussy
+            </button>
+
+            <button
+                id="close-modal-button"
+                class="secondary-button"
+            >
+                Sem pussy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- DRUHÁ ÚROVEŇ: ČÍSELNÉ BINGO -->
+    <main id="number-game-screen" class="screen">
+
+        <section class="game-header number-game-header">
+
+            <div>
+
+                <p class="small-title">
+                    DRUHÁ ÚROVEŇ
+                </p>
+
+                <h2>
+                    Pořádný důchodcovský bingo
+                </h2>
+
+                <p>
+                    Čísla se losují automaticky. Take your time, sice ho už moc nemáš, ale neva.
+                </p>
+
+            </div>
+
+            <button
+                id="new-number-card-button"
+                class="secondary-button"
+            >
+                Nová hra
+            </button>
+
+        </section>
+
+
+        <!-- HORNÍ PANEL LOSOVÁNÍ -->
+        <section class="number-top-panel">
+
+            <div class="current-number-box">
+
+                <p class="number-panel-label">
+                    PRÁVĚ VYLOSOVÁNO
+                </p>
+
+                <div id="current-number" class="current-number">
+                    –
+                </div>
+
+            </div>
+
+
+            <div class="countdown-box">
+
+                <p class="number-panel-label">
+                    DALŠÍ ČÍSLO ZA
+                </p>
+
+                <div id="countdown" class="countdown">
+                    3
+                </div>
+
+                <button
+                    id="pause-draw-button"
+                    class="main-button"
+                >
+                    Spustit losování
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORIE ČÍSEL NAHOŘE -->
+        <section class="drawn-numbers-section number-history-top">
+
+            <h3>
+                Vylosovaný čísla
+            </h3>
+
+            <div
+                id="drawn-numbers"
+                class="drawn-numbers"
+            >
+                Zatím nebylo vylosovaný žádný číslo.
+            </div>
+
+        </section>
+
+
+        <!-- NADPISY B I N G O -->
+        <div class="bingo-letters">
+
+            <div>B</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div>O</div>
+
+        </div>
+
+
+        <!-- ČÍSELNÁ KARTA -->
+        <section
+            id="number-bingo-board"
+            class="bingo-board number-bingo-board"
+            aria-label="Číselná bingo karta"
+        ></section>
+
+
+        <p id="number-game-status" class="game-status">
+            Stiskni Spustit losování.
+        </p>
+
+    </main>
+
+
+    <!-- VÝHERNÍ OKNO DRUHÉ ÚROVNĚ -->
+    <div id="number-win-modal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="winner-emoji">
+                👴🏆
+            </div>
+
+            <p class="small-title">
+                FINÁLNÍ DŮKAZ STÁŘÍ
+            </p>
+
+            <h2>BINGO!</h2>
+
+            <p>
+                Gratuluju úspěšně jsi dokončil důchodcovskej výcvik.
+            </p>
+
+            <button
+                id="play-again-button"
+                class="main-button"
+            >
+                Hrát znovu
+            </button>
+
+            <button
+                id="close-number-modal-button"
+                class="secondary-button"
+            >
+                Zavřít
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
