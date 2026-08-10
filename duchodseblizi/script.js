@@ -53,7 +53,7 @@ const closeNumberModalButton = document.querySelector(
 
 /* NASTAVENÍ RYCHLOSTI */
 
-const drawDelay = 8;
+const drawDelay = 4;
 
 
 /* PROMĚNNÉ */
@@ -69,6 +69,7 @@ let availableNumbers = [];
 
 let numberGameHasBeenWon = false;
 let autoDrawIsRunning = false;
+let gameWasStarted = false;
 
 let countdownValue = drawDelay;
 let countdownInterval = null;
@@ -315,6 +316,8 @@ function createNumberBingoGame() {
     availableNumbers = [];
 
     numberGameHasBeenWon = false;
+    gameWasStarted = false;
+
     countdownValue = drawDelay;
 
     currentNumber.textContent = "–";
@@ -324,9 +327,10 @@ function createNumberBingoGame() {
         "Zatím nebylo vylosovaný žádný číslo.";
 
     numberGameStatus.textContent =
-        "Klikni na „Probudit Mikeyho“ a přines mu radši pivko.";
+        "Stiskni Začít losování.";
 
-    pauseDrawButton.textContent = "🍺 Probudit Mikeho";
+    pauseDrawButton.textContent =
+        "▶ Začít losování";
 
     createAvailableNumbers();
     createNumberCard();
@@ -440,15 +444,9 @@ function toggleNumberCell(cell, index) {
 
 function toggleAutoDraw() {
     if (autoDrawIsRunning) {
-        stopAutoDraw();
-
-        numberGameStatus.textContent =
-            "😴 Mikey usnul. Losování je pozastavené.";
+        pauseAutoDraw();
     } else {
         startAutoDraw();
-
-        numberGameStatus.textContent =
-            "🍺 Mikey je vzhůru. Losování začíná.";
     }
 }
 
@@ -462,8 +460,21 @@ function startAutoDraw() {
 
     autoDrawIsRunning = true;
 
-    pauseDrawButton.textContent =
-        "😴 Uložit Mikeho ke spánku";
+    if (gameWasStarted) {
+        pauseDrawButton.textContent =
+            "⏸ Pauzička";
+
+        numberGameStatus.textContent =
+            "Pokračujem.";
+    } else {
+        gameWasStarted = true;
+
+        pauseDrawButton.textContent =
+            "⏸ Pauzička";
+
+        numberGameStatus.textContent =
+            "Losování začíná.";
+    }
 
     countdownValue = drawDelay;
     countdownElement.textContent = countdownValue;
@@ -485,11 +496,23 @@ function startAutoDraw() {
     }, 1000);
 }
 
-function stopAutoDraw() {
+function pauseAutoDraw() {
     autoDrawIsRunning = false;
 
     pauseDrawButton.textContent =
-        "🍺 Probudit Mikeyho";
+        "▶ Pokračujeme";
+
+    numberGameStatus.textContent =
+        "Pauzička.";
+
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+        countdownInterval = null;
+    }
+}
+
+function stopAutoDraw() {
+    autoDrawIsRunning = false;
 
     if (countdownInterval) {
         clearInterval(countdownInterval);
@@ -502,6 +525,9 @@ function drawNumber() {
         stopAutoDraw();
 
         currentNumber.textContent = "KONEC";
+
+        pauseDrawButton.textContent =
+            "Hotovo";
 
         numberGameStatus.textContent =
             "Všechna čísla byla vylosována. Mikey může jít spát.";
